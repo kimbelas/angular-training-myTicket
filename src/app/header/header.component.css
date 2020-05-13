@@ -1,0 +1,17 @@
+.logoutButton{
+    color: black;
+    background-color: white;
+}
+
+.logoutButton:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.buttonLink {
+    color: white !important;
+}
+
+.buttonLink:hover{
+    color: black !important;
+}

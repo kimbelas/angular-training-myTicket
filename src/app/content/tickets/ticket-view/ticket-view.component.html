@@ -1,0 +1,12 @@
+<h3>{{ "["+ticket?.template.alias+"] " + ticket?.template.name }} <br> {{"#" + ticket?.serial}}</h3>
+<hr>
+<div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Submitted at: {{ ticket?.created_at | date:'dd-MMM-yyyy' }}</li>
+        <li class="list-group-item">Priority: {{ ticket?.priority }}</li>
+        <li class="list-group-item">Status: {{ ticket?.status }}</li>
+        <li class="list-group-item">Assignee: {{ ticket?.assignee || 'Unassigned' }}</li>
+    </ul>
+</div>
+<hr>
+<a class="btn btn-sm btn-dark text-white" routerLink="/tickets">Back</a>

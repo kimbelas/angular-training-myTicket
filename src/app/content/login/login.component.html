@@ -1,0 +1,26 @@
+<div class="row h-100 justify-content-center align-items-center">
+    <div class="col-6 p-5">
+        <div class="card">
+            <div class="card-header bg-dark" style="color: white;">
+                Login
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginForm" (submit)="login()">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input formControlName="username" type="text" class="form-control" placeholder="Username">
+                        <small *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched"
+                            class="text-danger">Username is invalid!</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input formControlName="password" type="password" class="form-control" placeholder="Password">
+                        <small *ngIf="loginForm.get('password').invalid &&
+                            loginForm.get('password').touched"class="text-danger">Password is invalid!</small>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-sm">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

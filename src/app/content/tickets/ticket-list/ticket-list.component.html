@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <div class="pb-3"><strong>Total: {{ tickets?.length || '0'}} records</strong></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Assignee</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Status</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ticket of tickets">
+                <th>{{ "["+ticket?.template.alias +"] "+ ticket?.template.name }} <br> {{" #" + ticket?.serial }}</th>
+                <td>{{ ticket?.assignee || 'Unassigned' }}</td>
+                <td>{{ ticket?.priority }}</td>
+                <td>{{ ticket?.status }}</td>
+                <td><a class="btn btn-sm btn-dark text-black" [routerLink]="ticket?.id + '/view'">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
